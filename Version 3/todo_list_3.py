@@ -87,11 +87,21 @@ def main():
     downloads_path = str(Path.home() / file_location / "todolist.txt")
 
     # open list and save to user_list
-    user_list = []
-    with open(downloads_path) as file:
-        for line in file:
-            line = line.strip()
-            user_list.append(line)
+    # use try/except to make empty list if todolist.txt does not yet exist
+    try:
+        user_list = []
+        with open(downloads_path) as file:
+            for line in file:
+                line = line.strip()
+                user_list.append(line)
+    # if file is not found, create empty list
+    except FileNotFoundError:
+        user_list = []
+    
+    except Exception as e:
+        # Handle any other exception, prit out exception message
+        # You can just use this general exception handleing
+        print(f"Something went wrong. \n{e}")
 
     # Create todolist object
     my_list = TodoList(user_list, downloads_path)
