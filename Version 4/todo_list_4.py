@@ -10,6 +10,9 @@ from pathlib import Path
 # import tkinter
 from tkinter import *
 
+#import system
+import sys
+
 class TodoList:
     def __init__(self, user_list, download_location):
         #TODO: create empty list
@@ -83,6 +86,7 @@ def menu(list=[], still_running='y'):
 
 def menu_gui(list):
     window = Tk()
+    window.attributes('-topmost', True)
 
     # Create buttons
     add_to_list_button = Button(window, text="Add item to list", command=list.new_items)
@@ -108,6 +112,13 @@ def menu_gui(list):
         command=list.save_list
     )
     save_list_button.pack()
+
+    quit_program_button = Button(
+        window,
+        text="Quit Program",
+        command=sys.exit
+    )
+    quit_program_button.pack()
 
     window.mainloop()
 
