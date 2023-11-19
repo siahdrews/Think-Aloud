@@ -1,7 +1,7 @@
 """
     Name: todo_list_2.py
     Written by: Josiah Andrews
-    Written on: 9/128/23
+    Written on: 9/12/23
     Purpose: create a list of items for user to keep track of
 """
 # import to save todo list to downloads folder
