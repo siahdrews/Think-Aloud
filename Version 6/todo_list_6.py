@@ -29,6 +29,7 @@ class TodoList:
         self.root = Tk()
         self.root.attributes('-topmost', True)
         self.root.title("Todo List")
+        self.root.iconbitmap("todolist.ico")
         self.create_widgets()
         self.list_widgets()
 
