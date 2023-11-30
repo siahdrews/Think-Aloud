@@ -1,5 +1,5 @@
 """
-    Name: todo_list_6.py
+    Name: todo_list.py
     Written by: Josiah Andrews
     Written on: 11/30/23
     Purpose: create a list of items for user to keep track of
